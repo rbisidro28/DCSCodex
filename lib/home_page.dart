@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:table_calendar/table_calendar.dart';
+import './main_drawer.dart';
 
 class HomePage extends StatefulWidget {
 	 static String tag = 'home-page';
@@ -42,9 +43,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Calendar'),
+        title: Text('DCS Codex Calendar'),
         backgroundColor: Color(0xff800000),
       ),
+      drawer: MainDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
