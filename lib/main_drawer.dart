@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dcscodex/home_page.dart';
 import 'package:dcscodex/notifications_page.dart';
+import 'package:dcscodex/request_page.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -57,6 +58,21 @@ class MainDrawer extends StatelessWidget {
               Navigator.push(context, new MaterialPageRoute(
                 builder: (context) =>
                 new NotificationsPage())
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.add_alert),
+            title: Text(
+              'Request a Notification',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            onTap: () {
+              Navigator.push(context, new MaterialPageRoute(
+                builder: (context) =>
+                new RequestPage())
               );
             },
           ),
